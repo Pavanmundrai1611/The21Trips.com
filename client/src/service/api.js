@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = 'https://the21-trips-com-api.vercel.app';
+const url = 'http://localhost:8080';
 
 export const addUserBookings = async (data) => {
   try {
