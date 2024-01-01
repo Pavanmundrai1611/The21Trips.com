@@ -13,7 +13,16 @@ dotenv.config();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+
+// Configure cors with the allowed origin
+const corsOptions = {
+  origin: 'https://the21-trips-com-api.vercel.app',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // enable set cookie
+  optionsSuccessStatus: 204,
+};
+
+app.use(cors(corsOptions));
 
 app.use('/', Routes);
 
@@ -23,10 +32,10 @@ const PASSWORD = process.env.DB_PASSWORD;
 const PORT = process.env.PORT || 8080;
 
 (async () => {
-    try {
-        await Connection(USERNAME, PASSWORD);
-        app.listen(PORT, () => console.log(`Server is running successfully on PORT ${PORT}`));
-    } catch (error) {
-        console.error('Failed to connect to the database:', error);
-    }
+  try {
+    await Connection(USERNAME, PASSWORD);
+    app.listen(PORT, () => console.log(`Server is running successfully on PORT ${PORT}`));
+  } catch (error) {
+    console.error('Failed to connect to the database:', error);
+  }
 })();
