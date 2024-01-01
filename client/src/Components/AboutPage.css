@@ -1,0 +1,139 @@
+/* AboutPage.css */
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center; /* Center video containers */
+  align-items: center;
+}
+
+.video-container.first,
+.video-container.third {
+  flex-direction: row;
+}
+
+.video-container.second,
+.video-container.fourth {
+  flex-direction: row-reverse;
+}
+
+.video-description {
+  flex: 1;
+  padding: 0 20px;
+  max-width: 600px; /* Adjust max-width as needed */
+  box-sizing: border-box;
+}
+
+.video {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  object-fit: cover;
+  margin: 10px 0; /* Add margin between videos */
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .video {
+    max-width: calc(50% - 20px); /* Adjust max-width for smaller screens */
+    height: auto;
+  }
+
+  .video-description {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .video {
+    max-width: calc(80% - 20px); /* Adjust max-width for smaller screens */
+    height: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .video {
+    max-width: calc(80% - 25px); /* Adjust max-width for smaller screens */
+    height: auto;
+  }
+}
+
+.videodiv{
+  display: flex;
+  justify-content: center;
+}
+
+.cover-pic {
+  width: 100%;
+  height: auto;
+  max-width: 100%; /* Ensure cover pic is responsive */
+  display: block;
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+/* AboutPage.css */
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #7099f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-item {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

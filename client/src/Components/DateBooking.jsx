@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext,useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -28,6 +28,9 @@ const DateBooking = () => {
       fetchBusData();
     }
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handlePassengerChange = (e) => {
     setPassengerCount(parseInt(e.target.value, 10));
@@ -188,7 +191,7 @@ const DateBooking = () => {
   };
 
   return (
-    <div className='booking-container'>
+    <div className='booking-container text-center'>
       <div className="back-button-container">
         <button onClick={handleBackButtonClick} className='btn btn-outline-dark'>Back</button>
       </div>

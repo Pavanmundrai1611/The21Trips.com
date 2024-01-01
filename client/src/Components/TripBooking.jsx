@@ -240,12 +240,16 @@ const TripBooking = () => {
   const handlePlanChange = (event) => {
     setSelectedPlan(event.target.value);
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 
   return (
     <div className="container" style={{ textAlign: 'center' }}>
       <CustomNavbar />
       <div className='m-4'>
-        <h1 className='font-carattere'><span className='font-maps'>The21Trip.com</span><p style={{ fontSize: "22px", marginLeft: "5rem" }}>- luxury Journeys to 21 Destinations in India..!</p></h1>
+        <h1 className='font-carattere'><span className='font-maps'>The21Trip.com</span><p style={{ marginLeft: "5rem" }}>- luxury Journeys to 21 Destinations in India..!</p></h1>
         <p className=''>Experience the epitome of luxury travel with The21Trip.com.! <br /> From pick-up to premier hotels, expert guides, and top-notch safety measures, we ensure every Monday and Thursday is an adventure.</p>
         <br /><h3><span className='font-smooch'> Explore India in style, comfort, and safety - crafting extraordinary memories with us.</span></h3>
       </div>

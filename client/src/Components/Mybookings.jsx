@@ -35,6 +35,10 @@ const MyBookings = () => {
     return () => unsubscribe();
   }, [auth]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleShowModal = (bookingId) => {
     setBookingIdToDelete(bookingId);
     setShowModal(true);
@@ -56,7 +60,7 @@ const MyBookings = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-1 ">
       <CustomNavbar />
 
       {userId ? (

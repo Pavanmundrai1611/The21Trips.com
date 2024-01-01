@@ -71,6 +71,10 @@ const SeaterBooking = () => {
     setPhoneNumber(event.target.value);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleNameChange = (index, event) => {
     const names = [...customerNames];
     names[index] = event.target.value;
@@ -207,7 +211,7 @@ const SeaterBooking = () => {
     navigate(-1); // Use navigate with a negative value to go back
   };
   return (
-    <div className='seater-booking-container'>
+    <div className='seater-booking-container text-center'>
       <div className="back-button-container">
         <button onClick={handleBackButtonClick} className='btn btn-outline-dark'>Back</button>
       </div>
@@ -340,7 +344,7 @@ const SeaterBooking = () => {
           </tr>
         </table>
       </div>
-      <button id="submitBtn" className='btn btn-outline-dark' onClick={handleBookClick}>
+      <button id="submitBtn" className='btn btn-outline-dark mb-4' onClick={handleBookClick}>
         Book!
       </button>
 
