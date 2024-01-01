@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['react-router-dom', 'date-fns', 'react-datepicker'],
+      external: ['react-router-dom', 'react-datepicker'],
     },
     
   },
