@@ -1,0 +1,105 @@
+body {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: rgb(250, 245, 245);
+}
+
+.font-bungee {
+  font-family: 'Bungee Spice', cursive;
+  background: linear-gradient(to bottom, #f46a14, rgb(144, 211, 239), rgb(68, 233, 103));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+.font-carattere {
+  font-family: 'Carattere', sans-serif;
+}
+
+.font-edu {
+  font-family: 'Edu VIC WA NT Beginner', sans-serif;
+}
+
+.font-rubik {
+  font-family: 'Rubik Scribble', sans-serif;
+}
+
+.font-maps {
+  font-family: 'Rubik Maps', sans-serif;
+  background: linear-gradient(to bottom, #fc7826, rgb(139, 209, 239), rgb(121, 232, 51));
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.1);
+}
+
+.font-smooch {
+  font-family: 'Smooch', sans-serif;
+  background: linear-gradient(to bottom, #f6640a, rgb(50, 124, 156), rgb(121, 232, 51));
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.1);
+  color: transparent;
+}
+
+.slider {
+  position: relative;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0%;
+}
+
+.font-smooch2 {
+  font-family: 'Smooch', sans-serif;
+}
+
+.font-sriracha {
+  font-family: 'Sriracha', sans-serif;
+}
+
+.font-philosopher {
+  font-family: 'Philosopher', sans-serif;
+}
+
+.font-concert{
+  font-family: 'Concert One',sans-serif;
+}
+
+/* Default style for all screen sizes */
+.img-container {
+  width: 100%;
+  opacity: 0.7;
+}
+
+/* Style for small screens */
+@media (max-width: 575.98px) {
+  .img-container {
+    height: 300px;
+  }
+}
+
+/* Style for medium screens */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .img-container {
+    height: 400px;
+  }
+}
+
+/* Style for large screens */
+@media (min-width: 992px) {
+  .img-container {
+    height: 500px;
+  }
+}
+
+.back-button-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+    

@@ -1,0 +1,50 @@
+/* Reset Bootstrap styles for table */
+.seater-booking-container table {
+  border: 1px solid black;
+  border-collapse: separate;
+  border-spacing: 15px 10px;
+}
+
+/* Your existing styles */
+.seater-booking-container .seater {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2rem 2rem;
+}
+
+.seater-booking-container th, .seater-booking-container td {
+  text-align: center;
+}
+
+.seater-booking-container td.number {
+  padding: 15px 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  width: auto;
+  cursor: pointer;
+}
+
+.seater-booking-container .selected {
+  background-color: green;
+}
+
+.seater-booking-container .booked {
+  background-color: grey;
+}
+
+/* Responsive styles for small screens */
+@media only screen and (max-width: 600px) {
+  .seater-booking-container .seater {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Responsive styles for medium screens */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .seater-booking-container .seater {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
