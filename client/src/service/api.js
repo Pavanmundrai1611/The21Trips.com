@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = 'http://localhost:8080';
+const url = 'https://the21trips-server.onrender.com';
 
 export const addUserBookings = async (data) => {
   try {
