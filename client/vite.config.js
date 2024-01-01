@@ -1,6 +1,7 @@
 // vite.config.js
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
@@ -8,5 +9,12 @@ export default defineConfig({
     rollupOptions: {
       external: ['react-router-dom', 'date-fns', 'react-datepicker'],
     },
+    
   },
+  resolve: {
+    alias: {
+      'date-fns': path.resolve(__dirname, 'node_modules/date-fns'),
+    },
+  },
+
 });
